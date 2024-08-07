@@ -11,7 +11,7 @@ const socket = require("socket.io");
 
 
 
-const allowedOrigins = ['http://localhost:3000', ''];
+const allowedOrigins = ['http://localhost:3000', 'https://toufiqnet.netlify.app'];
 
 app.use(cors({
     origin: function (origin, callback) {
@@ -54,7 +54,7 @@ const server = app.listen(process.env.PORT,()=>{
 
 const io = socket(server, {
     cors: {
-      origin: "http://localhost:3000",
+      origin: "https://toufiqnet.netlify.app",
       credentials: true,
     },
   });
